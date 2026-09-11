@@ -138,14 +138,14 @@
     #detail-card-img { width: 220px; height: 450px; }
     .back-to-top { bottom: 20px; right: 20px; padding: 10px 14px; font-size: 11px; }
     
-    /* 手机端全局底部外层容器收紧，防止留白太长 */
-    .ending-wrapper { padding: 0 20px 40px 20px !important; }
-    /* 手机端单独为 Ending 瘦身缩短，精简内边距和字号 */
-    .ending-section { padding: 25px 15px; margin-top: 30px; }
-    .ending-section h3 { font-size: 1.15rem; letter-spacing: 1px; margin-bottom: 8px; }
-    .ending-section p { font-size: 0.9rem; margin-bottom: 4px; }
-    .ending-section div { margin-top: 12px !important; }
-    .ending-section .resume-btn { padding: 10px 20px; font-size: 11px; letter-spacing: 1px; }
+    /* 手机端 Ending 包装盒左右边距压到极小 (10px)，使其宽度铺满屏幕两侧 */
+    .ending-wrapper { padding: 0 10px 30px 10px !important; }
+    /* 手机端 Ending 内部上下留白压缩，呈现扁宽的高级视觉 */
+    .ending-section { padding: 20px 15px; margin-top: 20px; border-radius: 6px; }
+    .ending-section h3 { font-size: 1.05rem; letter-spacing: 1px; margin-bottom: 6px; }
+    .ending-section p { font-size: 0.85rem; margin-bottom: 2px; }
+    .ending-section div { margin-top: 10px !important; }
+    .ending-section .resume-btn { padding: 8px 16px; font-size: 10.5px; letter-spacing: 1px; }
   }
   
   .nav-btn { display: inline-block; font-size: 13px; border: none; border-bottom: 1px solid #1C1C1C; padding: 5px 0; border-radius: 0; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px; }
@@ -416,7 +416,7 @@
     </div>
   </div>
 
-  <!-- 全局底部 Ending 终章模块：赋予类名 ending-wrapper 方便手机端精准收紧 -->
+  <!-- 全局底部 Ending 终章模块：手机端极度压紧宽度和高度 -->
   <div class="ending-wrapper" style="max-width: 1200px; margin: 0 auto; padding: 0 40px 80px 40px;">
     <div class="ending-section">
       <h3>THE READING IS COMPLETE.</h3>
