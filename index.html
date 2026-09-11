@@ -98,7 +98,7 @@
   .detail-layout { display: flex; gap: 60px; margin-top: 20px; }
   
   .detail-left { flex: 0 0 260px; position: sticky; top: 60px; height: fit-content; display: flex; flex-direction: column; }
-  .detail-right { flex: 1; padding-bottom: 40px; }
+  .detail-right { flex: 1; padding-bottom: 20px; }
   
   #detail-card-img { width: 100%; height: 530px; border-radius: 12px; background-size: 100% 100%; margin-bottom: 24px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
   
@@ -138,12 +138,14 @@
     #detail-card-img { width: 220px; height: 450px; }
     .back-to-top { bottom: 20px; right: 20px; padding: 10px 14px; font-size: 11px; }
     
+    /* 手机端全局底部外层容器收紧，防止留白太长 */
+    .ending-wrapper { padding: 0 20px 40px 20px !important; }
     /* 手机端单独为 Ending 瘦身缩短，精简内边距和字号 */
-    .ending-section { padding: 30px 20px; margin-top: 30px; }
-    .ending-section h3 { font-size: 1.25rem; letter-spacing: 1.5px; margin-bottom: 12px; }
-    .ending-section p { font-size: 0.95rem; margin-bottom: 6px; }
-    .ending-section div { margin-top: 15px !important; }
-    .ending-section .resume-btn { padding: 10px 20px; font-size: 12px; }
+    .ending-section { padding: 25px 15px; margin-top: 30px; }
+    .ending-section h3 { font-size: 1.15rem; letter-spacing: 1px; margin-bottom: 8px; }
+    .ending-section p { font-size: 0.9rem; margin-bottom: 4px; }
+    .ending-section div { margin-top: 12px !important; }
+    .ending-section .resume-btn { padding: 10px 20px; font-size: 11px; letter-spacing: 1px; }
   }
   
   .nav-btn { display: inline-block; font-size: 13px; border: none; border-bottom: 1px solid #1C1C1C; padding: 5px 0; border-radius: 0; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px; }
@@ -414,8 +416,8 @@
     </div>
   </div>
 
-  <!-- 全局底部 Ending 终章模块：跨越左侧与右侧，位于整页的最下方 -->
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 40px 80px 40px;">
+  <!-- 全局底部 Ending 终章模块：赋予类名 ending-wrapper 方便手机端精准收紧 -->
+  <div class="ending-wrapper" style="max-width: 1200px; margin: 0 auto; padding: 0 40px 80px 40px;">
     <div class="ending-section">
       <h3>THE READING IS COMPLETE.</h3>
       <p>Four cards. Four ways of thinking.</p>
