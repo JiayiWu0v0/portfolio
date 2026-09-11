@@ -50,7 +50,7 @@
   }
   button:hover, .resume-btn:hover { background: #1C1C1C; color: #F3F2EE; }
   
-  /* 强制隔离的页面层级 */
+  /* 强制隔离的页面层级（电脑端大留白） */
   .page-layer { display: none; min-height: 100vh; padding: 60px 40px; box-sizing: border-box; }
   
   /* 页面整体淡入动画 */
@@ -131,21 +131,37 @@
   .back-to-top { position: fixed; bottom: 40px; right: 40px; z-index: 9999; background: #1C1C1C; color: #F3F2EE; border: 1px solid #1C1C1C; padding: 12px 18px; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: all 0.3s ease; }
   .back-to-top:hover { background: #F3F2EE; color: #1C1C1C; }
   
-  /* 手机端响应式优化 */
+  /* ========================================= */
+  /* 手机端响应式优化：全面打造宽松、精致、呼吸感强的移动端体验 */
+  /* ========================================= */
   @media (max-width: 900px) {
-    .detail-layout { flex-direction: column; gap: 30px; }
+    /* 1. 扩大内容展示区的真实宽度，减少挤压感 */
+    .page-layer { padding: 40px 20px; }
+    
+    /* 2. Intro 与 菜单排版微调 */
+    #layer-intro h1 { font-size: 3.2rem; }
+    .intro-lead { font-size: 1.2rem; }
+    .intro-body { font-size: 1rem; margin-bottom: 35px; }
+    .cards-container { gap: 30px; }
+    #layer-menu h2 { font-size: 2rem; margin-bottom: 40px; }
+
+    /* 3. 详情页排版：卡片与文本框留白更加自然 */
+    .detail-layout { flex-direction: column; gap: 40px; }
     .detail-left { flex: auto; position: static; align-items: center; text-align: center; border-bottom: 1px solid #ddd; padding-bottom: 30px; }
     #detail-card-img { width: 220px; height: 450px; }
-    .back-to-top { bottom: 20px; right: 20px; padding: 10px 14px; font-size: 11px; }
     
-    /* 手机端 Ending 包装盒左右边距压到极小 (10px)，使其宽度铺满屏幕两侧 */
-    .ending-wrapper { padding: 0 10px 30px 10px !important; }
-    /* 手机端 Ending 内部上下留白压缩，呈现扁宽的高级视觉 */
-    .ending-section { padding: 20px 15px; margin-top: 20px; border-radius: 6px; }
-    .ending-section h3 { font-size: 1.05rem; letter-spacing: 1px; margin-bottom: 6px; }
-    .ending-section p { font-size: 0.85rem; margin-bottom: 2px; }
-    .ending-section div { margin-top: 10px !important; }
-    .ending-section .resume-btn { padding: 8px 16px; font-size: 10.5px; letter-spacing: 1px; }
+    .project-box { padding: 30px 20px; margin-bottom: 30px; border-radius: 8px; }
+    .scroll-box { padding: 20px 15px; }
+    
+    /* 4. Ending 模块：彻底解决又窄又长的问题，横向舒展，纵向克制 */
+    .ending-wrapper { padding: 20px 20px 60px 20px !important; }
+    .ending-section { padding: 40px 20px; margin-top: 10px; border-radius: 8px; }
+    .ending-section h3 { font-size: 1.35rem; letter-spacing: 2px; margin-bottom: 12px; }
+    .ending-section p { font-size: 0.95rem; margin-bottom: 5px; }
+    .ending-section div { margin-top: 25px !important; }
+    .ending-section .resume-btn { padding: 12px 24px; font-size: 11px; letter-spacing: 2px; }
+    
+    .back-to-top { bottom: 20px; right: 20px; padding: 10px 14px; font-size: 11px; }
   }
   
   .nav-btn { display: inline-block; font-size: 13px; border: none; border-bottom: 1px solid #1C1C1C; padding: 5px 0; border-radius: 0; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px; }
@@ -416,7 +432,7 @@
     </div>
   </div>
 
-  <!-- 全局底部 Ending 终章模块：手机端极度压紧宽度和高度 -->
+  <!-- 全局底部 Ending 终章模块 -->
   <div class="ending-wrapper" style="max-width: 1200px; margin: 0 auto; padding: 0 40px 80px 40px;">
     <div class="ending-section">
       <h3>THE READING IS COMPLETE.</h3>
