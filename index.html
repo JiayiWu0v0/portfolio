@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jiayi Wu | Portfolio</title>
-<!-- 引入 Google Fonts 高级审美字体：Inter (现代正文) 与 Playfair Display (高雅衬线) -->
+<!-- 引入 Google Fonts 高级审美字体 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -122,7 +122,7 @@
   .scroll-box::-webkit-scrollbar-track { background: transparent; }
   .scroll-box::-webkit-scrollbar-thumb { background-color: #ccc; border-radius: 10px; }
   
-  /* Ending 终章设计：独立于两栏布局之外，横跨整个底部 */
+  /* Ending 终章设计：电脑端保持宽敞大气 */
   .ending-section { background: #fff; border: 1px solid #e0dfdb; padding: 60px 40px; margin-top: 60px; border-radius: 8px; text-align: center; }
   .ending-section h3 { font-size: 1.8rem; letter-spacing: 3px; margin-bottom: 20px; text-transform: uppercase; }
   .ending-section p { font-size: 1.1rem; color: #555; margin-bottom: 10px; font-weight: 300; }
@@ -131,11 +131,19 @@
   .back-to-top { position: fixed; bottom: 40px; right: 40px; z-index: 9999; background: #1C1C1C; color: #F3F2EE; border: 1px solid #1C1C1C; padding: 12px 18px; font-size: 12px; text-transform: uppercase; letter-spacing: 2px; cursor: pointer; border-radius: 4px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: all 0.3s ease; }
   .back-to-top:hover { background: #F3F2EE; color: #1C1C1C; }
   
+  /* 手机端响应式优化 */
   @media (max-width: 900px) {
     .detail-layout { flex-direction: column; gap: 30px; }
     .detail-left { flex: auto; position: static; align-items: center; text-align: center; border-bottom: 1px solid #ddd; padding-bottom: 30px; }
     #detail-card-img { width: 220px; height: 450px; }
     .back-to-top { bottom: 20px; right: 20px; padding: 10px 14px; font-size: 11px; }
+    
+    /* 手机端单独为 Ending 瘦身缩短，精简内边距和字号 */
+    .ending-section { padding: 30px 20px; margin-top: 30px; }
+    .ending-section h3 { font-size: 1.25rem; letter-spacing: 1.5px; margin-bottom: 12px; }
+    .ending-section p { font-size: 0.95rem; margin-bottom: 6px; }
+    .ending-section div { margin-top: 15px !important; }
+    .ending-section .resume-btn { padding: 10px 20px; font-size: 12px; }
   }
   
   .nav-btn { display: inline-block; font-size: 13px; border: none; border-bottom: 1px solid #1C1C1C; padding: 5px 0; border-radius: 0; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px; }
